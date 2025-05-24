@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.effect.*?>
+
+<StackPane fx:id="endSceneRoot" styleClass="end-scene-root" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mnour.jfxmaze.EndGameController">
+
+    <!-- Header Text -->
+    <Text fx:id="headerText" styleClass="end-game-header" fill="WHITE" stroke="BLACK" strokeWidth="1.5" StackPane.alignment="TOP_CENTER">
+        <font>
+            <Font name="Rockwell" size="36" />
+        </font>
+        <effect>
+            <DropShadow color="#0000007f" radius="4.0" spread="0.1" />
+        </effect>
+        <StackPane.margin>
+            <Insets top="40" />
+        </StackPane.margin>
+    </Text>
+    
+    <!-- Stats Text -->
+    <Text fx:id="statsText" styleClass="end-game-stats" fill="WHITE" stroke="BLACK" strokeWidth="0.8" StackPane.alignment="TOP_CENTER">
+        <StackPane.margin>
+            <Insets top="100" />
+        </StackPane.margin>
+    </Text>
+    
+    <!-- Action Buttons -->
+    <VBox fx:id="buttonsVBox" spacing="15" alignment="CENTER" StackPane.alignment="CENTER">
+        <Button fx:id="saveScoreButton" text="Save Score" styleClass="menu-button" prefWidth="200" />
+        <Button fx:id="newMazeButton" text="New Maze" styleClass="menu-button" prefWidth="200" />
+        <Button fx:id="menuButton" text="Main Menu" styleClass="menu-button" prefWidth="200" />
+        <Button fx:id="exitAppButton" text="Exit JFXMaze" styleClass="menu-button" prefWidth="200" />
+        <StackPane.margin>
+            <Insets top="100" />
+        </StackPane.margin>
+    </VBox>
+    
+    <!-- Logout Button at bottom of screen -->
+    <Button fx:id="logoutButton" text="Logout" styleClass="logout-button" StackPane.alignment="BOTTOM_CENTER">
+        <StackPane.margin>
+            <Insets bottom="20" />
+        </StackPane.margin>
+    </Button>
+</StackPane> 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.StrokeType?>
+
+<StackPane fx:id="rootPane" styleClass="welcome-screen-root" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mnour.jfxmaze.WelcomeController">
+    <!-- Background ImageView will be added programmatically at index 0 -->
+
+    <!-- Main content VBox without semi-transparent background -->
+    <VBox fx:id="contentBox" spacing="35" alignment="CENTER" styleClass="welcome-content-box-transparent" StackPane.alignment="CENTER">
+        <padding>
+            <Insets top="80" right="50" bottom="120" left="50" />
+        </padding>
+        
+        <Text fx:id="titleText" text="JFXMaze">
+            <font><Font name="Rockwell" size="90" /></font>
+            <fill><javafx.scene.paint.Color fx:constant="WHITESMOKE" /></fill>
+            <stroke><javafx.scene.paint.Color fx:constant="BLACK" /></stroke>
+            <strokeWidth>2.5</strokeWidth>
+            <strokeType><StrokeType fx:constant="OUTSIDE" /></strokeType>
+        </Text>
+        
+        <Text fx:id="subtitleText" text="Navigate the Labyrinth!" styleClass="subtitle-text">
+            <font><Font name="OCR A Extended" size="24" /></font>
+        </Text>
+        
+        <VBox spacing="20" alignment="CENTER">
+            <Button fx:id="playGameButton" text="Play Game" onAction="#handlePlayGame" styleClass="menu-button" prefWidth="300" prefHeight="60" focusTraversable="true" />
+            <Button fx:id="settingsButton" text="Settings" onAction="#handleSettings" styleClass="menu-button" prefWidth="300" prefHeight="60" focusTraversable="true" />
+            <Button fx:id="exitButton" text="Exit Game" onAction="#handleExit" styleClass="menu-button" prefWidth="300" prefHeight="60" focusTraversable="true" />
+        </VBox>
+    </VBox>
+    
+    <!-- Bottom overlay BorderPane (credits, audio, logout) -->
+    <BorderPane fx:id="bottomBar" pickOnBounds="false" StackPane.alignment="BOTTOM_CENTER" mouseTransparent="false">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15" />
+        </padding>
+        <left>
+            <Button fx:id="creditsButton" text="Credits" styleClass="small-button" onAction="#handleShowCredits" BorderPane.alignment="BOTTOM_LEFT" focusTraversable="false" />
+        </left>
+        <center>
+            <Button fx:id="logoutButton" text="Logout" onAction="#handleLogout" styleClass="logout-button" BorderPane.alignment="BOTTOM_CENTER" focusTraversable="false" />
+        </center>
+        <right>
+            <Button fx:id="audioButton" text="Audio: On" styleClass="small-button" onAction="#handleToggleAudio" BorderPane.alignment="BOTTOM_RIGHT" focusTraversable="false" />
+        </right>
+    </BorderPane>
+</StackPane> 

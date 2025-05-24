@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mnour.jfxmaze.CreditsController">
+    <VBox alignment="CENTER" spacing="20">
+        <padding>
+            <Insets bottom="30" left="30" right="30" top="30" />
+        </padding>
+
+        <!-- Title -->
+        <Text fx:id="creditsTitle" text="JFXMaze Credits">
+            <font><Font name="OCR A Extended" size="36.0" /></font>
+        </Text>
+
+        <!-- Scrollable Credits -->
+        <ScrollPane fitToWidth="true" maxHeight="500">
+            <VBox spacing="15.0">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </padding>
+
+                <!-- Developer -->
+                <Text text="Developer">
+                    <font><Font name="OCR A Extended" size="24.0" /></font>
+                </Text>
+                <HBox alignment="CENTER_LEFT" spacing="5">
+                    <Text text="Created by" />
+                    <Hyperlink onAction="#handleHyperlinkClick" text="Mnour3593" userData="https://linktr.ee/mnour3593" />
+                </HBox>
+
+                <Separator />
+
+                <!-- Audio -->
+                <Text text="Music and Sound Effects">
+                    <font><Font name="OCR A Extended" size="24.0" /></font>
+                </Text>
+                <Text text="All audio sourced from Pixabay:" />
+                <VBox spacing="5">
+                    <Hyperlink onAction="#handleHyperlinkClick" text="Bonus Sound – u_vdwj1c20kz" userData="https://pixabay.com/sound-effects/bonus-level-up-206316/" />
+                    <Hyperlink onAction="#handleHyperlinkClick" text="Victory Sound – freesound_community" userData="https://pixabay.com/sound-effects/piglevelwin2mp3-14800/" />
+                    <Hyperlink onAction="#handleHyperlinkClick" text="Click Sound – freesound_community" userData="https://pixabay.com/sound-effects/mouse-click-153941/" />
+                    <Hyperlink onAction="#handleHyperlinkClick" text="Background Music – Nicholas Panek" userData="https://pixabay.com/music/arcade-chiptune-24291/" />
+                </VBox>
+
+                <Separator />
+
+                <!-- Visual -->
+                <Text text="Visual Assets">
+                    <font><Font name="OCR A Extended" size="24.0" /></font>
+                </Text>
+                <Text text="Free and AI-generated resources:" />
+                <VBox spacing="5">
+                    <Hyperlink onAction="#handleHyperlinkClick" text="Textures – OpenGameArt.org" userData="https://opengameart.org/" />
+                    <Hyperlink onAction="#handleHyperlinkClick" text="Player Sprite – cuddle-bug on Itch.io" userData="https://cuddle-bug.itch.io/apocalypse" />
+                    <Text text=" Background – AI-generated imagery" />
+                </VBox>
+
+                <Separator />
+
+                <!-- Frameworks -->
+                <Text text="Frameworks and Libraries">
+                    <font><Font name="OCR A Extended" size="24.0" /></font>
+                </Text>
+                <Hyperlink onAction="#handleHyperlinkClick" text="JavaFX" userData="https://openjfx.io/" />
+
+                <Separator />
+
+                <!-- Special Thanks -->
+                <Text text="Special Thanks">
+                    <font><Font name="OCR A Extended" size="24.0" /></font>
+                </Text>
+                <Text text="Prof. Dr. Ahmet Gürhanlı, for insightful lectures and guidance." />
+                <Text text="Claude Sonnet and Google Gemini AI, for helping structure ideas." />
+                <Text text="Friends and peers for valuable feedback and support." />
+
+                <Text styleClass="copyright-text" text="🖐 © 2025 Mnour3593 – Open Source (MIT License)" />
+            </VBox>
+        </ScrollPane>
+
+        <!-- Back Button -->
+        <Button fx:id="backButton" onAction="#handleBack" text="Back" />
+    </VBox>
+</StackPane>

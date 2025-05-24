@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="gameRootPane" styleClass="game-screen-root" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mnour.jfxmaze.GameScreenController">
+    
+    <!-- Canvas Container -->
+    <center>
+        <StackPane fx:id="canvasContainer" alignment="CENTER" styleClass="canvas-container">
+            <Canvas fx:id="mazeCanvas" />
+        </StackPane>
+    </center>
+    
+    <!-- Status Panel -->
+    <bottom>
+        <VBox fx:id="statusPanel" spacing="10" alignment="CENTER" styleClass="status-panel">
+            <padding>
+                <Insets top="10" right="10" bottom="15" left="10" />
+            </padding>
+            <prefHeight>150</prefHeight>
+            
+            <!-- Player Info -->
+            <HBox fx:id="playerInfoBox" spacing="30" alignment="CENTER">
+                <Label fx:id="timeLabel" text="Time: 0s" styleClass="info-label" />
+                <Label fx:id="player1Label" styleClass="info-label" />
+                <!-- player2Label will be added programmatically -->
+            </HBox>
+            
+            <!-- Action Buttons -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button fx:id="restartButton" text="New Maze" styleClass="game-action-button" focusTraversable="false" />
+                <Button fx:id="quitButton" text="Main Menu" styleClass="game-action-button" focusTraversable="false" />
+                <Button fx:id="audioToggleButton" text="Audio: On" styleClass="small-button" focusTraversable="false" />
+            </HBox>
+            
+            <!-- Controls Info -->
+            <Label fx:id="keyboardInfoLabel" styleClass="info-label-small" />
+        </VBox>
+    </bottom>
+</BorderPane> 

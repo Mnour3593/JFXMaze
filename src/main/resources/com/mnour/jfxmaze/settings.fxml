@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+
+<BorderPane styleClass="settings-screen-root" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mnour.jfxmaze.SettingsController">
+    <top>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets top="30" right="20" bottom="20" left="20" />
+            </padding>
+            
+            <Text text="Game Settings" styleClass="settings-title">
+                <font>
+                    <Font name="Rockwell" size="36" />
+                </font>
+            </Text>
+        </VBox>
+    </top>
+    
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="settings-scroll-pane" pannable="true">
+            <VBox spacing="20" alignment="CENTER">
+                <padding>
+                    <Insets top="20" right="30" bottom="20" left="30" />
+                </padding>
+                
+                <!-- Audio Settings Section -->
+                <VBox spacing="15" styleClass="settings-panel">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20" />
+                    </padding>
+                    
+                    <Text text="Audio Settings" styleClass="settings-section-title">
+                        <font>
+                            <Font name="OCR A Extended" size="24" />
+                        </font>
+                    </Text>
+                    
+                    <!-- Mute Toggle -->
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Audio:" styleClass="settings-label" />
+                        <ToggleButton fx:id="muteToggle" text="Muted" styleClass="toggle-button" onAction="#handleMuteToggle" />
+                    </HBox>
+                    
+                    <!-- Music Volume -->
+                    <VBox spacing="5">
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <Label text="Music Volume:" styleClass="settings-label" />
+                            <Label fx:id="musicVolumeLabel" text="50%" styleClass="settings-value-label" />
+                        </HBox>
+                        <Slider fx:id="musicVolumeSlider" min="0" max="100" value="50" styleClass="volume-slider" />
+                    </VBox>
+                    
+                    <!-- SFX Volume -->
+                    <VBox spacing="5">
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <Label text="Sound Effects Volume:" styleClass="settings-label" />
+                            <Label fx:id="sfxVolumeLabel" text="70%" styleClass="settings-value-label" />
+                        </HBox>
+                        <Slider fx:id="sfxVolumeSlider" min="0" max="100" value="70" styleClass="volume-slider" />
+                    </VBox>
+                </VBox>
+                
+                <!-- User Account Section -->
+                <VBox spacing="15" styleClass="settings-panel">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20" />
+                    </padding>
+                    
+                    <Text text="User Account" styleClass="settings-section-title">
+                        <font>
+                            <Font name="OCR A Extended" size="24" />
+                        </font>
+                    </Text>
+                    
+                    <Label fx:id="usernameLabel" text="Current User: Guest" styleClass="settings-info-label" />
+                    
+                    <Button fx:id="changePassButton" text="Change Password" styleClass="settings-button" prefWidth="300" onAction="#handleChangePassword" />
+                    <Button fx:id="deleteAccountButton" text="Delete My Account" styleClass="settings-button" prefWidth="300" onAction="#handleDeleteAccount" />
+                </VBox>
+                
+                <!-- Score Management Section -->
+                <VBox spacing="15" styleClass="settings-panel">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20" />
+                    </padding>
+                    
+                    <Text text="Scores &amp; Leaderboard" styleClass="settings-section-title">
+                        <font>
+                            <Font name="OCR A Extended" size="24" />
+                        </font>
+                    </Text>
+                    
+                    <Button fx:id="viewLeaderboardButton" text="View My Scores / Leaderboard" styleClass="settings-button" prefWidth="300" onAction="#handleViewLeaderboard" />
+                    <Button fx:id="exportScoresButton" text="Export All Scores" styleClass="settings-button" prefWidth="300" onAction="#handleExportScores" />
+                    <Button fx:id="clearMyScoresButton" text="Clear My Scores" styleClass="settings-button" prefWidth="300" onAction="#handleClearScores" />
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+    
+    <bottom>
+        <HBox spacing="15" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="30" left="20" />
+            </padding>
+            
+            <Button fx:id="backButton" text="Back to Main Menu" onAction="#handleBackToMenu" styleClass="menu-button" />
+            <Button fx:id="saveButton" text="Save Settings" onAction="#handleSaveSettings" styleClass="menu-button" />
+        </HBox>
+    </bottom>
+</BorderPane> 
