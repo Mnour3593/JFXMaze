@@ -109,7 +109,7 @@ JFXMaze/
 
 ### 📋 Requirements
 - **Windows 10/11** (64-bit)
-- **Java 11 or higher**  ([Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) if you don't have it)
+- **Java 17 or higher**  ([Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) if you don't have it)
 
 ### 📁 What's Included
 - ✅ Complete game with all dependencies bundled
