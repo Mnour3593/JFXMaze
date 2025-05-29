@@ -20,10 +20,11 @@ Watch the maze in action and see how the game plays!
 ```
 
 JFXMaze/
-├── src/
-│   ├── main/
-│   │   ├── java/       ← Java source files and controllers
-│   │   └── resources/  ← FXML layouts, CSS, images
+├── dist/               ← a folder that includes the JAR to run the game without an IDE.
+│   │   └── javafx/     ← JavaFX libraries required to run the JAR
+│   ├── JFXMaze-1.0-SNAPSHOT-jar-with-dependencies.jar
+│   ├── README.txt
+│   ├── run_jfxmaze_standalone.bat
 ├── images/             ← screenshots of UI flows (.png)
 │   ├── login.png
 │   ├── welcome.png
@@ -33,6 +34,10 @@ JFXMaze/
 │   ├── gamescreen.png
 │   ├── endgame.png
 │   └── scores.png
+├── src/
+│   ├── main/
+│   │   ├── java/       ← Java source files and controllers
+│   │   └── resources/  ← FXML layouts, CSS, images
 ├── pom.xml             ← Maven build & dependencies
 └── README.md
 
@@ -90,7 +95,33 @@ JFXMaze/
 
 > [!NOTE]
 > Or, alternatively, open the project in your favorite Java IDE and run the Main.java class directly.
-   
+
+---
+
+## 📦 Standalone Distribution
+> [!TIP]
+> **Want to play without setting up Maven or cloning the repo?** Download the ready-to-run standalone version!
+
+### 🎯 Quick Play (No Setup Required)
+1. **Download** the latest standalone release: [**JFXMazeStandAloneV1.zip**](https://github.com/Mnour3593/JFXMaze/releases/download/1.0/JFXMazeStandAloneV1.zip)
+2. **Extract** the zip file anywhere on your computer
+3. **Double-click** `run_jfxmaze_standalone.bat` to play instantly!
+
+### 📋 Requirements
+- **Windows 10/11** (64-bit)
+- **Java 11 or higher**  ([Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) if you don't have it)
+
+### 📁 What's Included
+- ✅ Complete game with all dependencies bundled
+- ✅ JavaFX runtime libraries included
+- ✅ Smart launcher that finds Java automatically
+- ✅ No installation or configuration needed
+
+### 🔧 Troubleshooting
+- **"Java not found" error?** → Install Java from [Adoptium.net](https://adoptium.net/)
+- **Game won't start?** → Run from Command Prompt to see detailed error messages
+- **Need help?** → Check the included `README.txt` in the download
+
 ---
 
 ## 📸 Screenshots
